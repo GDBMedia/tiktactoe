@@ -142,7 +142,7 @@ rand(){
   		return 3;
   	}
   }
- 
+
 }
 // var newBoard = new Board(1,2);
 // newBoard.move
@@ -150,7 +150,7 @@ class Game {
   constructor(player1, player2) {
     this.player1 = player1;
     this.player2 = player2;
-    this.board= new Board; 
+    this.board= new Board;
   }
 
   player1move (position){
@@ -160,14 +160,15 @@ class Game {
   	return this.board.mark(2, position);
   }
   // possibleMoves(){
-  // 	return 
+  // 	return
   // }
 }
 
 $(function(event){
+  $("body").fadeIn(1200);
 	var player1Input = $("#player1").val();
 	var player2Input = $("#player2").val();
-	
+
 	var example;
 	var gameType = 1;
 
@@ -180,7 +181,7 @@ $(function(event){
 		$("#play").fadeIn();
 		gameType = 1;
 		event.preventDefault();
-		
+
 	});
 	$("#noob").click(function(event){
 		$("#buttons").hide();
@@ -188,7 +189,7 @@ $(function(event){
 		$("#play").fadeIn();
 		gameType = 2;
 		event.preventDefault();
-		
+
 	});
 	$("#Hard").click(function(event){
 		$("#buttons").hide();
@@ -196,7 +197,7 @@ $(function(event){
 		$("#play").fadeIn();
 		gameType = 3;
 		event.preventDefault();
-		
+
 	});
 	$("#play").click(function(event){
 		$("#game").fadeIn("slow");
@@ -208,16 +209,16 @@ $(function(event){
 			player2Input = "Computer";
 		}
 		example = new Game(player1Input, player2Input);
-		
+
 	});
 	$("#0").click(function(event){
-	
+
 		playerID = clickCheck(this.id, example, playerID);
 		if(gameType === 2 && playerID === 2){
 			noobAiClick(example);
 		}
 		event.preventDefault();
-		
+
 	});
 	$("#1").click(function(event){
 		playerID = clickCheck(this.id, example, playerID);
@@ -225,7 +226,7 @@ $(function(event){
 			noobAiClick(example);
 		}
 		event.preventDefault();
-		
+
 	});
 	$("#2").click(function(event){
 		playerID = clickCheck(this.id, example, playerID);
@@ -233,7 +234,7 @@ $(function(event){
 			noobAiClick(example);
 		}
 		event.preventDefault();
-		
+
 	});
 	$("#3").click(function(event){
 		playerID = clickCheck(this.id, example, playerID);
@@ -241,7 +242,7 @@ $(function(event){
 			noobAiClick(example);
 		}
 		event.preventDefault();
-		
+
 	});
 	$("#4").click(function(event){
 		playerID = clickCheck(this.id, example, playerID);
@@ -249,7 +250,7 @@ $(function(event){
 			noobAiClick(example);
 		}
 		event.preventDefault();
-		
+
 	});
 	$("#5").click(function(event){
 		playerID = clickCheck(this.id, example, playerID);
@@ -257,7 +258,7 @@ $(function(event){
 			noobAiClick(example);
 		}
 		event.preventDefault();
-		
+
 	});
 	$("#6").click(function(event){
 		playerID = clickCheck(this.id, example, playerID);
@@ -265,7 +266,7 @@ $(function(event){
 			noobAiClick(example);
 		}
 		event.preventDefault();
-		
+
 	});
 	$("#7").click(function(event){
 		playerID = clickCheck(this.id, example, playerID);
@@ -273,7 +274,7 @@ $(function(event){
 			noobAiClick(example);
 		}
 		event.preventDefault();
-		
+
 	});
 	$("#8").click(function(event){
 		playerID = clickCheck(this.id, example, playerID);
@@ -281,13 +282,13 @@ $(function(event){
 			noobAiClick(example);
 		}
 		event.preventDefault();
-		
+
 	});
 	$(".closed").click(function(event){
 		location.reload();
-		
+
 	});
-	
+
 });
 function clickCheck(id, example, playerID){
 	if(example.board.checkSpot(id)){
@@ -315,18 +316,20 @@ function clickCheck(id, example, playerID){
 			console.log("youre dumb")
 			return playerID;
 		}
-		
-		
+
+
 }
 function checkEnd(example){
 	var win = example.board.checkWin();
 		if( win === 1){
 			$('#myModal').modal('show');
 			$("#win").text(example.player1+" Wins!");
+      $("#cup").show();
 		}
 		else if(win === 2){
 			$('#myModal').modal('show');
 			$("#win").text(example.player2+" Wins!");
+      $("#cup").show();
 		}
 		else if(win === 4){
 			$('#myModal').modal('show');
@@ -338,8 +341,6 @@ function noobAiClick(example){
 
 	var n = example.board.rand();
 	$("#"+n).click();
-		
+
 
 }
-	
-
