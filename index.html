@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.2.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Rides 'n Stuff</title>
+  </head>
+  <body>
+
+  <!--  header start -->
+    <div class="jumbotron">
+      <h1>Tic-Tac-Toe</h1>
+    </div>
+  <!-- header end -->
+  <div class="container">
+  <div id="intial">
+    <div id="buttons">
+      <button id="multi" class="btn btn-lg btn-success">Multiplayer</button>
+      <button id="noob" class="btn btn-lg btn-success">Noob</button>
+      <button id="Hard" class="btn btn-lg btn-success" disabled="true">Impossible</button>
+    </div>
+    <form class="form" id="nameForm">
+      <div id="player1-group" class="form-group myhidden">
+          <label for="player1" class="control-label">Player1:</label>
+          <input id="player1" class="form-control" placeholder="Name" type="text">
+      </div>
+       <div id="player2-group" class="form-group myhidden">
+          <label for="player2" class="control-label">Player2:</label>
+          <input id="player2" class="form-control" placeholder="Name" type="text">
+      </div>
+
+    </form>
+    <button class="btn btn-lg btn-primary myhidden" id="play">Play!</button>
+
+  </div>
+  <div id="game" class="myhidden">
+  <div class="row"><h1 id="p1" class="player">Player 1</h1> <h1 id="p2" class="myhidden player">Player 2</h1></div>
+  <div class="row">
+    <table>
+      <tr>
+        <th id="0"><img  src="img/blank.jpg" id="0b"> <img src="img/x.png" id="0x" class="myhidden"> <img src="img/o.png" id="0o" class="myhidden"></th>
+        <th id="1"><img  src="img/blank.jpg" id="1b"> <img src="img/x.png" id="1x" class="myhidden"> <img src="img/o.png" id="1o" class="myhidden"></th>
+        <th id="2"><img  src="img/blank.jpg" id="2b"> <img src="img/x.png" id="2x" class="myhidden"> <img src="img/o.png" id="2o" class="myhidden"></th>
+      </tr>
+      <tr>
+        <th id="3"><img  src="img/blank.jpg" id="3b"> <img src="img/x.png" id="3x" class="myhidden"> <img src="img/o.png" id="3o" class="myhidden"></th>
+        <th id="4"><img  src="img/blank.jpg" id="4b"> <img src="img/x.png" id="4x" class="myhidden"> <img src="img/o.png" id="4o" class="myhidden"></th>
+        <th id="5"><img  src="img/blank.jpg" id="5b"> <img src="img/x.png" id="5x" class="myhidden"> <img src="img/o.png" id="5o" class="myhidden"></th>
+      </tr>
+      <tr>
+        <th id="6"><img  src="img/blank.jpg" id="6b"> <img src="img/x.png" id="6x" class="myhidden"> <img src="img/o.png" id="6o" class="myhidden"></th>
+        <th id="7"><img  src="img/blank.jpg" id="7b"> <img src="img/x.png" id="7x" class="myhidden"> <img src="img/o.png" id="7o" class="myhidden"></th>
+        <th id="8"><img  src="img/blank.jpg" id="8b"> <img src="img/x.png" id="8x" class="myhidden"> <img src="img/o.png" id="8o" class="myhidden"></th>
+      </tr>
+    </table>
+    </div>
+  </div>
+    <!--  modal start -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+        
+          <div class="modal-header">
+            <button type="button" class="close closed" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="modal-title">Congratulations</h3>
+          </div>
+          <div class="modal-body">
+          <div class="jumbotron">
+            <h1 id="win"></h1>
+            <img src="img/cat.png" class="myhidden" id="cat">
+          </div>
+            
+      
+              <button id="submit" class="btn closed btn-info pull-right" data-dismiss="modal">Close!</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--   model end -->
+
+  <script src="js/bootstrap.js"></script>
+</body>
+</html>
