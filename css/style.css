@@ -1,6 +1,6 @@
 
 label{
-	font-size: 1.5em;
+	font-size: 1.8em;
 }
 .form-control{
 	font-size: 2em;
@@ -13,6 +13,7 @@ label{
 .btn-success{
 	padding: .5em;
 	font-size: 1.8em;
+	margin: .5em;
 }
 .btn-primary{
 	margin-top: 1em;
@@ -38,7 +39,7 @@ table{
 
 }
 th{
-	border: black 1em solid;
+	border: #333 1em solid;
 	width: 33.3%;
 	text-align: center;
 }
@@ -92,4 +93,10 @@ img{
 }
 body{
 	display: none;
+}
+#multi, #noob, #hard{
+	font-size: 3em;
+}
+#buttons{
+	text-align: center;
 }
