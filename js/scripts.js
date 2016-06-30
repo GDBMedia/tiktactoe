@@ -1,37 +1,7 @@
-// class AI {
-// 	constructor(){};
-// 	if(this.efficentArray[4] === 1){
-
-// 	}
-// }
-
-
 class Board {
   constructor() {
     this.efficentArray = new Int8Array(9);
   }
-/////AI expert player (tie only)
-// expert(){
-// 	///center (4) scenario
-// 	if(this.efficentArray[4] === 1){
-// 		//go for a corner
-// 	}
-// 	if(this.efficentArray[1,3,5,7] === 1){
-// 		//opposite side
-// 	}
-// 	if(this.efficentArray[0,2,6,8] === 1){
-// 		//move to corner
-// 	}
-
-
-// }
-
-// corners(){
-// 	0,2,6,8
-// }
-// center(){
-// 	return 4;
-// }
 
 rand(){
 	var x =1;
@@ -144,8 +114,6 @@ rand(){
   }
 
 }
-// var newBoard = new Board(1,2);
-// newBoard.move
 class Game {
   constructor(player1, player2) {
     this.player1 = player1;
@@ -159,9 +127,6 @@ class Game {
   player2move (position){
   	return this.board.mark(2, position);
   }
-  // possibleMoves(){
-  // 	return
-  // }
 }
 
 $(function(event){
